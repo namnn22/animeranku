@@ -109,8 +109,15 @@ const Post: React.FC<PostProps> = (props) => {
 				{node.modifiedGmt && (
 					<meta property="article:modified_time" content={node.modifiedGmt} />
 				)}
-				<meta property="og:image" content={node.featuredImage.node.sourceUrl} />
-				<meta property="og:image:alt" content={node.featuredImage.node.altText || node.title}/>
+				{node.featuredImage && (
+					<meta property="og:image" content={node.featuredImage.node.sourceUrl} />
+				)}
+				{node.featuredImage && (
+					<meta
+						property="og:image:alt"
+						content={node.featuredImage.node.altText || node.title}
+					/>
+				)}
 				<meta http-equiv="refresh" content={`0.5; url=https://animeranku.com/${path}`} />
 				<title>{node.title}</title>
 			</Head>
