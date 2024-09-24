@@ -124,6 +124,7 @@ const Post: React.FC<PostProps> = (props) => {
 			</Head>
 			<div className="post-container">
 				<h1>{node.title}</h1>
+				<input type="hidden" value={node}></input>
 				{node.featuredImage && (
 					<img
 						src={node.featuredImage.node.sourceUrl}
