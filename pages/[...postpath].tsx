@@ -85,6 +85,7 @@ interface PostProps {
 
 const Post: React.FC<PostProps> = (props) => {
 	const { node, host, path } = props;
+	console.log(node);
 
 	// to remove tags from excerpt
 	const removeTags = (str: string) => {
